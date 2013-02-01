@@ -649,37 +649,41 @@ Please make sure your boards conform to these design rules.</description>
 <via x="6.8" y="9.4" extent="1-16" drill="0.508"/>
 <via x="11" y="15.1" extent="1-16" drill="0.508"/>
 <polygon width="0.254" layer="16">
+<vertex x="10.8" y="19.9"/>
 <vertex x="5.7" y="19.9"/>
-<vertex x="5.7" y="13.4"/>
-<vertex x="7.5" y="10.9"/>
-<vertex x="7.5" y="10.5"/>
-<vertex x="6" y="10.5"/>
-<vertex x="6" y="8.3"/>
-<vertex x="7.5" y="8.3"/>
+<vertex x="5.7" y="16.6"/>
+<vertex x="6.8" y="16.6"/>
+<vertex x="6.8" y="12.4"/>
+<vertex x="7.4" y="11.5"/>
+<vertex x="7.4" y="10.1"/>
+<vertex x="6" y="10.1"/>
+<vertex x="6" y="8.8"/>
+<vertex x="7.5" y="8.8"/>
 <vertex x="7.5" y="5.4"/>
 <vertex x="6.8" y="4.6"/>
 <vertex x="5.4" y="4.6"/>
-<vertex x="4.4" y="3.7"/>
-<vertex x="4.3" y="0"/>
+<vertex x="4" y="3.1"/>
+<vertex x="4" y="0"/>
 <vertex x="13" y="0"/>
-<vertex x="13" y="16.5"/>
-<vertex x="10.5" y="16.5"/>
-<vertex x="10.5" y="20"/>
+<vertex x="13" y="16.4"/>
+<vertex x="10.8" y="16.4"/>
 </polygon>
 <wire x1="6.8" y1="10.6" x2="6.8" y2="9.4" width="0.4064" layer="1"/>
 <polygon width="0.254" layer="16" rank="2">
-<vertex x="5" y="19.5"/>
-<vertex x="5.1" y="13.1"/>
-<vertex x="6.9" y="10.7"/>
-<vertex x="6.9" y="5.8"/>
-<vertex x="6.3" y="5.2"/>
-<vertex x="4.6" y="5.2"/>
-<vertex x="3.7" y="4.3"/>
-<vertex x="3.5" y="0"/>
+<vertex x="5.2" y="19.9"/>
+<vertex x="5.2" y="16.1"/>
+<vertex x="6.3" y="16.1"/>
+<vertex x="6.3" y="12.2"/>
+<vertex x="6.9" y="11.3"/>
+<vertex x="6.9" y="5.6"/>
+<vertex x="6.5" y="5.2"/>
+<vertex x="4.8" y="5.2"/>
+<vertex x="3.4" y="3.8"/>
+<vertex x="3.3" y="0"/>
 <vertex x="0" y="0"/>
-<vertex x="0" y="16.3"/>
-<vertex x="2.6" y="16.3"/>
-<vertex x="2.6" y="19.5"/>
+<vertex x="0" y="16.4"/>
+<vertex x="2.2" y="16.4"/>
+<vertex x="2.2" y="19.9"/>
 </polygon>
 <wire x1="5.95" y1="9.3" x2="6.7" y2="9.3" width="0.6096" layer="1"/>
 <wire x1="6.7" y1="9.3" x2="6.8" y2="9.4" width="0.6096" layer="1"/>
@@ -708,13 +712,13 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="SDA">
 <contactref element="U1" pad="8"/>
 <wire x1="8.3" y1="4" x2="9.2" y2="4.9" width="0.254" layer="1"/>
-<wire x1="9.2" y1="4.9" x2="9.2" y2="8.5" width="0.254" layer="1"/>
+<wire x1="9.2" y1="4.9" x2="9.2" y2="8.3" width="0.254" layer="1"/>
 <contactref element="JP1" pad="2"/>
-<wire x1="5.23" y1="2.6" x2="5.23" y2="3.23" width="0.254" layer="1"/>
-<wire x1="5.23" y1="3.23" x2="6" y2="4" width="0.254" layer="1"/>
-<wire x1="6" y1="4" x2="8.3" y2="4" width="0.254" layer="1"/>
-<wire x1="7.45" y1="10.6" x2="7.45" y2="10.25" width="0.254" layer="1"/>
-<wire x1="7.45" y1="10.25" x2="9.2" y2="8.5" width="0.254" layer="1"/>
+<wire x1="5.23" y1="2.6" x2="5.23" y2="2.63" width="0.254" layer="1"/>
+<wire x1="5.23" y1="2.63" x2="6.6" y2="4" width="0.254" layer="1"/>
+<wire x1="6.6" y1="4" x2="8.3" y2="4" width="0.254" layer="1"/>
+<wire x1="7.45" y1="10.6" x2="7.45" y2="10.05" width="0.254" layer="1"/>
+<wire x1="7.45" y1="10.05" x2="9.2" y2="8.3" width="0.254" layer="1"/>
 </signal>
 <signal name="SCL">
 <contactref element="U1" pad="1"/>
