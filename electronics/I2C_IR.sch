@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,16 +39,16 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tPadExt" color="7" fill="1" visible="no" active="no"/>
-<layer number="54" name="bPadExt" color="1" fill="1" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tPadExt" color="7" fill="1" visible="yes" active="no"/>
+<layer number="54" name="bPadExt" color="1" fill="1" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -5807,15 +5807,17 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="22"/>
 <part name="FRAME1" library="mes" deviceset="LETTER_L" device=""/>
 <part name="JP3" library="pinhead-2" deviceset="PINHD-1X03" device="_2.00" value="Sharp Module"/>
-<part name="C4" library="rcl" deviceset="C-US" device="C0603" value="10uF"/>
+<part name="C4" library="rcl" deviceset="C-US" device="C0805K" value="10uF"/>
 <part name="P+4" library="supply1" deviceset="VCC" device="" value="5V"/>
 <part name="U1" library="mes_adc" deviceset="ADC081C021" device=""/>
-<part name="C1" library="rcl" deviceset="C-US" device="C0603" value="4.7uF"/>
+<part name="C1" library="rcl" deviceset="C-US" device="C0805K" value="4.7uF">
+<attribute name="PARTNO" value="T491A475K010AT"/>
+</part>
 <part name="JP1" library="pinhead-2" deviceset="PINHD-1X04" device="_2.54-S" value="MCU"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device="" value="5V"/>
-<part name="SJ1" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value="ADR0"/>
-<part name="SJ2" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value="ADR1"/>
+<part name="SJ1" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value="AD0"/>
+<part name="SJ2" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value="AD1"/>
 <part name="P+3" library="supply1" deviceset="VCC" device="" value="5V"/>
 <part name="P+5" library="supply1" deviceset="VCC" device="" value="5V"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
@@ -5839,7 +5841,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="C4" gate="G$1" x="154.94" y="88.9"/>
 <instance part="P+4" gate="VCC" x="154.94" y="116.84"/>
 <instance part="U1" gate="G$1" x="91.44" y="91.44" rot="R180"/>
-<instance part="C1" gate="G$1" x="48.26" y="93.98" rot="MR0"/>
+<instance part="C1" gate="G$1" x="48.26" y="93.98" rot="MR0">
+<attribute name="PARTNO" x="48.26" y="93.98" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="JP1" gate="A" x="96.52" y="139.7" rot="MR0"/>
 <instance part="SUPPLY2" gate="GND" x="106.68" y="124.46"/>
 <instance part="P+2" gate="VCC" x="106.68" y="157.48" rot="MR0"/>
@@ -5953,9 +5957,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="66.04" y="83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="99.06" y1="139.7" x2="114.3" y2="139.7" width="0.1524" layer="91"/>
-<label x="114.3" y="139.7" size="1.778" layer="95" rot="MR0"/>
+<pinref part="JP1" gate="A" pin="2"/>
+<wire x1="99.06" y1="142.24" x2="114.3" y2="142.24" width="0.1524" layer="91"/>
+<label x="114.3" y="142.24" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -5976,9 +5980,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="116.84" y="83.82" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="99.06" y1="142.24" x2="114.3" y2="142.24" width="0.1524" layer="91"/>
-<label x="114.3" y="142.24" size="1.778" layer="95" rot="MR0"/>
+<pinref part="JP1" gate="A" pin="3"/>
+<wire x1="99.06" y1="139.7" x2="114.3" y2="139.7" width="0.1524" layer="91"/>
+<label x="114.3" y="139.7" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="ADR1" class="0">
