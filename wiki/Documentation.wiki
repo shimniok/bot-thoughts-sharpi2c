@@ -2,12 +2,19 @@ Convert Sharp IR analog to I2C
 
 = Introduction =
 
-Add your content here.
+= Installation = 
 
+Two methods
+  * Splicing into the existing cable
+  * Replacing the JST connector
 
-= Details =
+== Splicing ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Replacing JST ==
+
+= Configuring I2C Address =
+
+= Software =
+
+Arduino
+mbed
