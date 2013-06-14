@@ -1,0 +1,97 @@
+#summary Working code examples for a plethora of platforms
+
+It's easy to interface the I2C adapter with your microcontroller. Here's how. First, you might want to acquaint yourself with the [Protocol protocol] and [Registers registers] used by the I2C Adapter.
+
+= Arduino =
+The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.)
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
+
+= Galago =
+Galago is a cool new rapid prototyping platform featuring an excellent IDE with built in debugging.
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
+
+
+= LPCXpresso =
+The Embedded Artists LPCXPresso is a series of ARM-based platforms that use the Code Red IDE and toolchain and LPC's implementation of the ARM CMSIS libraries.
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
+
+
+= mbed =
+The Embedded Artists / NXP mbed is an ARM-based rapid protoyping platform with a hardware abstraction layer similar to Arduino but more powerful.
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
+
+
+= .NET Micro Framework =
+This includes platforms like the FEZ Cerb 40, Netduino, etc., all programmable using Visual Studio and a nicely abstract API.
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
+
+
+= Propeller =
+The 8-core Parallax Propeller implements I2C in software making for a simple API with flexible, powerful hardware.
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
