@@ -52,3 +52,5 @@ The adpater provides solder jumpers for address selection. Each jumper has 3 pos
 || 0x3E || GND || GND || N/C ||
 || 0x3F || GND || GND || VCC ||
 || 0x40 || GND || GND || GND ||
+
+next: [Examples]
