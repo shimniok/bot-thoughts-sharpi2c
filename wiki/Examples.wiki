@@ -7,6 +7,10 @@ The Wire library is used for all the Arduino and Arduino-compatible offerings (T
 
 == Read Range ==
 {{{
+uint16_t value;
+uint8_t hibyte, lowbyte;
+value = hibyte << 8;
+value |= lowbyte;
 }}}
 
 == Read Register ==
@@ -38,6 +42,10 @@ The Embedded Artists LPCXPresso is a series of ARM-based platforms that use the 
 
 == Read Range ==
 {{{
+uint16_t value;
+uint8_t hibyte, lowbyte;
+value = hibyte << 8;
+value |= lowbyte;
 }}}
 
 == Read Register ==
@@ -54,6 +62,10 @@ The Embedded Artists / NXP mbed is an ARM-based rapid protoyping platform with a
 
 == Read Range ==
 {{{
+uint16_t value;
+uint8_t hibyte, lowbyte;
+value = hibyte << 8;
+value |= lowbyte;
 }}}
 
 == Read Register ==
@@ -82,7 +94,7 @@ This includes platforms like the FEZ Cerb 40, Netduino, etc., all programmable u
 
 
 = Propeller =
-The 8-core Parallax Propeller implements I2C in software making for a simple API with flexible, powerful hardware.
+The 8-core Parallax Propeller implements I2C in software making for a simple API with flexible, powerful hardware. Here are examples in SPIN.
 
 == Read Range ==
 {{{
