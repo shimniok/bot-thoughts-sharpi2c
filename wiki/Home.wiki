@@ -9,6 +9,12 @@
   * ==[Registers]==
   * ==[Protocol]==
   * ==[Tuning]==
-  * [Documentation]
 
 = Quick Start Guide =
+
+  * [Installation Install] the adapter inline onto the adapter's wires
+    * or install in place of the JST connector
+  * Add pin header or wires and connect to your MCU
+  * Write [Examples code] to read the distance
+  * Print out the result
+  * Enjoy!
