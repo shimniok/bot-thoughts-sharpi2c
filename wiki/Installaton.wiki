@@ -26,7 +26,7 @@ Simply cut the existing sensor wires and solder them into place on the adapter. 
 
 The adpater provides solder jumpers for address selection. Each jumper has 3 possible combinations. The default 7-bit I2C address is 0x26 (0x4c write, 0x4d read). The following table shows the addresses you can configure
 
-|| Address || A2 || A1 || A0 ||
+|| *Address* || *A2* || *A1* || *A0* ||
 || 0x26 || N/C || N/C || N/C ||
 || 0x27 || N/C || N/C || VCC ||
 || 0x28 || N/C || N/C || GND ||
