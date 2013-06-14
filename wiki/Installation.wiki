@@ -1,0 +1,54 @@
+#Here's how to install your Sharp Sensor I2C Adapter
+
+You can upgrade your Sharp I2C Ranger in one of two ways, a compact installation or a simple installation. Then, you'll configure the I2C address.
+
+= Compact Installation =
+
+For a compact installation, you'll replace the sensor's JST connector with the I2C adapter.
+
+  * Using solder wick, remove solder from the JST connector pins
+  * Remove the JST connector
+  * Insert a 3-way 2.0mm pin header through the adapter
+  * Solder one of the pins to the adapter
+  * Install the adapter and pins through the JST pin pads
+  * Solder another of the pins to the JST
+  * Solder the remaining pin at the adapter and Sensor
+  * Solder the remaining pins
+  * Install pin header or wires to connect to your MCU
+
+= Simple Installation =
+
+Simply cut the existing sensor wires and solder them into place on the adapter. Then install pin header or wires to connect to your MCU.
+
+= Configuring I2C Address =
+
+The adpater provides solder jumpers for address selection. Each jumper has 3 possible combinations. The default 7-bit I2C address is 0x26 (0x4c write, 0x4d read). The following table shows the addresses you can configure
+
+|| *Address* || *A2* || *A1* || *A0* ||
+|| 0x26 || N/C || N/C || N/C ||
+|| 0x27 || N/C || N/C || VCC ||
+|| 0x28 || N/C || N/C || GND ||
+|| 0x29 || N/C || VCC || N/C ||
+|| 0x2A || N/C || VCC || VCC ||
+|| 0x2B || N/C || VCC || GND ||
+|| 0x2C || N/C || GND || N/C ||
+|| 0x2D || N/C || GND || VCC ||
+|| 0x2E || N/C || GND || GND ||
+|| 0x2F || VCC || N/C || N/C ||
+|| 0x30 || VCC || N/C || VCC ||
+|| 0x31 || VCC || N/C || GND ||
+|| 0x32 || VCC || VCC || N/C ||
+|| 0x33 || VCC || VCC || VCC ||
+|| 0x34 || VCC || VCC || GND ||
+|| 0x35 || VCC || GND || N/C ||
+|| 0x36 || VCC || GND || VCC ||
+|| 0x37 || VCC || GND || GND ||
+|| 0x38 || GND || N/C || N/C ||
+|| 0x39 || GND || N/C || VCC ||
+|| 0x3A || GND || N/C || GND ||
+|| 0x3B || GND || VCC || N/C ||
+|| 0x3C || GND || VCC || VCC ||
+|| 0x3D || GND || VCC || GND ||
+|| 0x3E || GND || GND || N/C ||
+|| 0x3F || GND || GND || VCC ||
+|| 0x40 || GND || GND || GND ||
