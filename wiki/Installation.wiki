@@ -1,4 +1,4 @@
-#Here's how to install your Sharp Sensor I2C Adapter
+# Here's how to install your Sharp Sensor I2C Adapter
 
 You can upgrade your Sharp I2C Ranger in one of two ways, a compact installation or a simple installation. Then, you'll configure the I2C address.
 
