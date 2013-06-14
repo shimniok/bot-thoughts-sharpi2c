@@ -6,6 +6,7 @@
   * ==[Overview]==
   * ==[Installation]==
   * ==[Tuning]==
+  * ==[Registers]==
   * ==[Protocol]==
   * ==[Examples]==
   * [Documentation]
