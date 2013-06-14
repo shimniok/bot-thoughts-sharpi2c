@@ -8,7 +8,22 @@
   * READ low byte
   * Send STOP
 
-By default, without specifying any other [Registers register] to read, the Adapter will respond with the high, then low byte of the raw Sensor conversion as many times as you follow the sequence above.
+By default, without specifying any other [Registers register] to read, the Adapter will respond with the high, then low byte of the raw Sensor conversion. Repeat the above sequence over and over. In C to put the values back into a uint16_t:
+{{{
+uint16_t value;
+uint8_t hibyte, lowbyte;
+value = hibyte << 8;
+value |= lowbyte;
+}}}
+
+= Read The Sensor, 8-Bit =
+
+  * Send START
+  * Send Read Address
+  * READ high byte
+  * Send STOP
+
+If you want a quick 8-bit value, just read once after sending the start and the Read Address. How easy is that? Repeat the above sequence over and over.
 
 = Read A Register =
 
