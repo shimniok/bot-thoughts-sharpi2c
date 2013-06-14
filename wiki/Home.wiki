@@ -1,5 +1,5 @@
+#summary I2C Adapater Table of Contents
 #labels Featured
-#Convert your Sharp IR Sensor to I2C
 
 = Table of Contents =
 
