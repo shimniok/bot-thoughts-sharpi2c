@@ -2,10 +2,7 @@
 
 It's easy to interface the I2C adapter with your microcontroller. Here's how. First, you might want to acquaint yourself with the [Protocol protocol] and [Registers registers] used by the I2C Adapter.
 
-Below are examples for
-
-[Examples#Arduino]
-[Examples#mbed]
+Below are examples for: [Examples#Arduino Arduino], [Examples#Galago Galago], [Examples#LPCXpresso LPCXPresso], [Examples#mbed mbed], [Examples#Propeller Propeller], [Examples#Raspberry_Pi Raspberry Pi]
 
 = Arduino =
 The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.)
@@ -44,15 +41,6 @@ void loop() {
 = Galago =
 Galago is a cool new rapid prototyping platform featuring an excellent IDE with built in debugging.
 
-== Read Range ==
-{{{
-}}}
-
-== Read Register ==
-{{{
-}}}
-
-== Write Register ==
 {{{
 }}}
 
@@ -60,22 +48,12 @@ Galago is a cool new rapid prototyping platform featuring an excellent IDE with 
 = LPCXpresso =
 The Embedded Artists LPCXPresso is a series of ARM-based platforms that use the Code Red IDE and toolchain and LPC's implementation of the ARM CMSIS libraries.
 
-== Read Range ==
 {{{
 uint16_t value;
 uint8_t hibyte, lowbyte;
 value = hibyte << 8;
 value |= lowbyte;
 }}}
-
-== Read Register ==
-{{{
-}}}
-
-== Write Register ==
-{{{
-}}}
-
 
 = mbed =
 The Embedded Artists / NXP mbed is an ARM-based rapid protoyping platform with a hardware abstraction layer similar to Arduino but more powerful.
@@ -115,44 +93,13 @@ int main() {
 = .NET Micro Framework =
 This includes platforms like the FEZ Cerb 40, Netduino, etc., all programmable using Visual Studio and a nicely abstract API.
 
-== Read Range ==
-{{{
-}}}
-
-== Read Register ==
-{{{
-}}}
-
-== Write Register ==
-{{{
-}}}
-
-
 = Propeller =
 The 8-core Parallax Propeller implements I2C in software making for a simple API with flexible, powerful hardware. Here are examples in SPIN.
 
-== Read Range ==
-{{{
-}}}
-
-== Read Register ==
-{{{
-}}}
-
-== Write Register ==
 {{{
 }}}
 
 = Raspberry Pi =
 
-== Read Range ==
-{{{
-}}}
-
-== Read Register ==
-{{{
-}}}
-
-== Write Register ==
 {{{
 }}}
