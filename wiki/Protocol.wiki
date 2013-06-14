@@ -1,4 +1,4 @@
-#The protocol for the I2C Adapter is designed to be simple and efficient
+#summary The simple, efficient I2C Adapter protocol
 
 = Read The Sensor =
 
