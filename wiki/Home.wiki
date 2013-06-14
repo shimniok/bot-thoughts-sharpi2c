@@ -3,8 +3,8 @@
 
 = Table of Contents =
 
-  * ==[Introduction]==
+  * ==[Overview]==
   * ==[Installaton]==
-  * ==[I2C Protocol]==
-  * ==[Code Examples]==
+  * ==[Protocol]==
+  * ==[Examples]==
   * [Documentation]
