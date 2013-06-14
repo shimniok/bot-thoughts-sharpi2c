@@ -107,3 +107,17 @@ The 8-core Parallax Propeller implements I2C in software making for a simple API
 == Write Register ==
 {{{
 }}}
+
+= Raspberry Pi =
+
+== Read Range ==
+{{{
+}}}
+
+== Read Register ==
+{{{
+}}}
+
+== Write Register ==
+{{{
+}}}
