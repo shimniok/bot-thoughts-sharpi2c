@@ -5,20 +5,35 @@ It's easy to interface the I2C adapter with your microcontroller. Here's how. Fi
 = Arduino =
 The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.)
 
-== Read Range ==
 {{{
-uint16_t value;
-uint8_t hibyte, lowbyte;
-value = hibyte << 8;
-value |= lowbyte;
-}}}
+#include <Wire.h>
 
-== Read Register ==
-{{{
-}}}
+int addr = 0x26;
 
-== Write Register ==
-{{{
+void setup() {
+  Wire.begin(addr);
+  Serial.begin(115200);
+  Serial.println("Hello world!\n");
+}
+
+void loop() {
+  char data[3];
+  int value;
+
+  Wire.requestFrom(addr, 2);
+  if (Wire.available()) {
+    data[0] = Wire.read();
+    if (Wire.available()) {
+      data[1] = Wire.read();
+      value = data[0]<<8 | data[1];
+      Serial.print(millis());
+      Serial.print(" ");
+      Serial.print(value);
+      Serial.println();
+    }
+  }
+
+}
 }}}
 
 = Galago =
@@ -60,20 +75,35 @@ value |= lowbyte;
 = mbed =
 The Embedded Artists / NXP mbed is an ARM-based rapid protoyping platform with a hardware abstraction layer similar to Arduino but more powerful.
 
-== Read Range ==
 {{{
-uint16_t value;
-uint8_t hibyte, lowbyte;
-value = hibyte << 8;
-value |= lowbyte;
-}}}
+#include "mbed.h"
 
-== Read Register ==
-{{{
-}}}
+DigitalOut myled(LED1);
+I2C i2c(p28, p27);       // sda, scl
+Serial pc(USBTX, USBRX); // tx, rx
+Timer t;
 
-== Write Register ==
-{{{
+int addr = 0x26;
+
+int main() {
+    
+    i2c.frequency(100000);
+    pc.baud(115200);
+    pc.printf("Hello world!\n");
+    t.start();
+    t.reset();
+    while(1) {
+        char data[3];
+
+        if ( i2c.read(addr<<1, data, 2) != 0) {
+            pc.printf("no response from %d\n", addr);
+        } else {
+            int value;
+            value = data[0]<<8 | data[1];
+            pc.printf("%d %d\n", t.read_ms(), value);
+        }
+    }
+}
 }}}
 
 
