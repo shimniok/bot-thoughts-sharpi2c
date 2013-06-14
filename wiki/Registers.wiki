@@ -1,0 +1,8 @@
+#multiple registers make I2C adapter configuration flexible and easy
+
+|| *Register* || *R/W* || *Description* ||
+|| 0 || RO || raw ADC conversion high byte ||
+|| 1 || RO || raw ADC conversion low byte ||
+|| 2 || RO || number of oversamples performed ||
+|| 3 || RW || effective bit resolution, 10-16 ||
+|| 4 || RW || leaky integrator filtering value, higher: more filtering ||
