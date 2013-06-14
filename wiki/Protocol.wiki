@@ -1,0 +1,46 @@
+#The protocol for the I2C Adapter is designed to be simple and efficient
+
+= Read The Sensor =
+
+  * Send START
+  * Send Read Address
+  * READ high byte
+  * READ low byte
+  * Send STOP
+
+By default, without specifying any other [Registers register] to read, the Adapter will respond with the high, then low byte of the raw Sensor conversion as many times as you follow the sequence above.
+
+= Read A Register =
+
+  * Send START
+  * Send Write Address
+  * Send Register Index
+  * Send RESTART
+  * Send Read Address
+  * Read byte
+  * Send STOP
+
+If you want to read a particular [Registers register], simply write the requested register index, restart, and read the byte.
+
+= Write A Register =
+
+  * Send START
+  * Send Write Address
+  * Send Register Index
+  * Send new register value
+  * Send STOP
+
+Just write to the adapter with the [Registers register] index and the new value.
+
+= Read Multiple Registers =
+
+  * Send START
+  * Send Write Address
+  * Send Register Index
+  * Send RESTART
+  * Send Read Address
+  * Read byte
+  * Repeat above n times
+  * Send STOP
+
+To read multiple registers, simply send a write with the starting register, then read as many times as you like to get as many registers as you like.
