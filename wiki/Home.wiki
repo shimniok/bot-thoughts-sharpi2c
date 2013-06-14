@@ -4,7 +4,10 @@
 = Table of Contents =
 
   * ==[Overview]==
-  * ==[Installaton]==
+  * ==[Installation]==
+  * ==[Tuning]==
   * ==[Protocol]==
   * ==[Examples]==
   * [Documentation]
+
+= Quick Start Guide =
