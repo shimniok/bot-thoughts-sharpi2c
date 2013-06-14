@@ -1,7 +1,5 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
-
 You can upgrade your Sharp I2C Ranger in one of two ways, a compact installation or a simple installation. Then, you'll configure the I2C address.
 
 = Compact Installation =
