@@ -2,6 +2,11 @@
 
 It's easy to interface the I2C adapter with your microcontroller. Here's how. First, you might want to acquaint yourself with the [Protocol protocol] and [Registers registers] used by the I2C Adapter.
 
+Below are examples for
+
+[Examples#Arduino]
+[Examples#mbed]
+
 = Arduino =
 The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.)
 
