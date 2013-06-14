@@ -5,10 +5,10 @@
 
   * ==[Overview]==
   * ==[Installation]==
-  * ==[Tuning]==
+  * ==[Examples]==
   * ==[Registers]==
   * ==[Protocol]==
-  * ==[Examples]==
+  * ==[Tuning]==
   * [Documentation]
 
 = Quick Start Guide =
