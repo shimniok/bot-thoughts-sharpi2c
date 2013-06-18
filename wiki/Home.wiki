@@ -1,7 +1,6 @@
 #summary I2C Adapater Documentation
 #labels Featured
 
-  * ==[Overview]==
   * ==[Installation]==
   * ==[Examples]==
   * ==[Registers]==
