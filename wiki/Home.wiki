@@ -1,7 +1,5 @@
-#summary I2C Adapater Table of Contents
+#summary I2C Adapater Documentation
 #labels Featured
-
-= Table of Contents =
 
   * ==[Overview]==
   * ==[Installation]==
