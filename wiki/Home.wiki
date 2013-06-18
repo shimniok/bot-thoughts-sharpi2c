@@ -9,7 +9,7 @@
   * ==[Registers]==
   * ==[Protocol]==
   * ==[Tuning]==
-  * ==[FirmwareUpdate|Updating Firmware]==
+  * ==[FirmwareUpdate Updating Firmware]==
 
 = Quick Start Guide =
 
