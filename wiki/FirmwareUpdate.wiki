@@ -6,7 +6,7 @@ The I2C Adapter uses an ATtiny24A microcontroller and supports the standard 6-pi
 
 || *Adapter* || *AVRISP* ||
 || !R || !RESET ||
-|| DI || MOSI ||
+|| SDA/DI || MOSI ||
 || DO || MISO ||
 || SCL/SCK || SCK ||
 || V || VCC ||
