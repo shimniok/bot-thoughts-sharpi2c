@@ -1,7 +1,7 @@
 #!/bin/sh
 
-PROJECT=Test3
-TGT=t85
+PROJECT=i2cadc
+TGT=t84
 DEV=/dev/pololu0
 PGM=avrispv2
 

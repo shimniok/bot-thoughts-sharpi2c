@@ -73,10 +73,9 @@ void usiTwiSlaveInit(uint8_t addr, int top, uint32_t wmask);
 /**
  * return value in specified register
  * @param reg is the register to return
- * @param value will have a copy of the register value if reg is in range
- * @return false if reg out of range, true otherwise
+ * @return copy of the register value if reg is in range, 0 if reg is out of range
  */
-bool usiTwiGetRegister(int reg, uint8_t *value);
+uint8_t usiTwiGetRegister(int reg);
 
 /**
  * sets the specified register to the specified value
