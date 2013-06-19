@@ -61,6 +61,21 @@
 #  define USI_OVERFLOW_VECTOR USI_OVERFLOW_vect
 #endif
 
+#if defined( __AVR_ATtiny24A__ ) | \
+		defined( __AVR_ATtiny44A__ ) | \
+		defined( __AVR_ATtiny84A__ )
+#  define DDR_USI             DDRA
+#  define PORT_USI            PORTA
+#  define PIN_USI             PINA
+#  define PORT_USI_SDA        PA6
+#  define PORT_USI_SCL        PA4
+#  define PIN_USI_SDA         PINA6
+#  define PIN_USI_SCL         PINA4
+#  define USI_START_COND_INT  USISIF
+#  define USI_START_VECTOR    USI_STR_vect
+#  define USI_OVERFLOW_VECTOR USI_OVF_vect
+#endif
+
 #if defined( __AVR_ATtiny25__ ) | \
 		defined( __AVR_ATtiny45__ ) | \
 		defined( __AVR_ATtiny85__ )
@@ -328,8 +343,8 @@ void usiTwiSlaveInit(uint8_t addr, int top, uint32_t wmask) {
 
 } // end usiTwiSlaveInit
 
-// put data in the transmission buffer, wait if buffer is full
 
+// put data in the transmission buffer, wait if buffer is full
 void usiTwiTransmitByte(uint8_t data) {
 
 	uint8_t tmphead;
@@ -371,29 +386,20 @@ bool usiTwiDataInReceiveBuffer(void) {
 	return rxHead != rxTail;
 } // end usiTwiDataInReceiveBuffer
 
-/**
- * return value in specified register
- * @param reg is the register to return
- * @param value will have a copy of the register value if reg is in range
- * @return false if reg out of range, true otherwise
- */
-bool usiTwiGetRegister(int reg, uint8_t *value) {
-	bool result = false;
+/** return value in specified register */
+uint8_t usiTwiGetRegister(int reg) {
+	uint8_t value = 0;
 
 	if (reg >= 0 && reg < regmax) {
-		*value = registers[reg];
-		result = true;
+		value = registers[reg];
 	}
 
-	return result;
+	return value;
 }
 
-/**
- * sets the specified register to the specified value
- * @param reg is the register to set
- * @param value is the value to be copied into the register
- * @return false if reg out of range, true otherwise
- */bool usiTwiSetRegister(int reg, uint8_t value) {
+
+/** sets the specified register to the specified value */
+bool usiTwiSetRegister(int reg, uint8_t value) {
 	bool result = false;
 
 	if (reg >= 0 && reg < MAXREG) {
@@ -538,6 +544,7 @@ ISR( USI_OVERFLOW_VECTOR ) {
 		// put the next byte into current register if not read-only
 		if (write_mask & (1<<current)) {
 			registers[current] = USIDR;
+			// TODO: we now need to update the routines' static variable
 		}
 		overflowState = USI_SLAVE_REQUEST_DATA_REG;
 		SET_USI_TO_SEND_ACK( )
