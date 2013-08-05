@@ -94,24 +94,29 @@ int main() {
 This includes platforms like the FEZ Cerb 40, Netduino, etc., all programmable using Visual Studio and a nicely abstract API.
 
 = Propeller =
-The 8-core Parallax Propeller implements I2C in software making for a simple API with flexible, powerful hardware. Here are examples in SPIN.
+Here are examples in SPIN. Please use my general purpose I2C master because it correctly implements I2C single master protocol. I2C drivers that ignore the I2C spec by driving the bus directly(!) could damage your Propeller or the A2D or both. Those drivers that don't honor clock stretching may not work.
 
 {{{
+'' i2c_sharpir demo
+
 CON
   _clkmode      = xtal1 + pll16x
   _xinfreq      = 5_000_000
   _stack        = 50
     
-  scl           = 16
-  sda           = 17
+  sda           = 16
+  scl           = 17
 
   addr = $26
 
 OBJ
-  i2c : "Basic_I2C_Driver_1"
+  Wire   : "I2Cmaster"
   Serial : "FullDuplexSerial"
 
-pub Start | val
+pub Start | val, count, raddr, waddr, ack
+
+  waddr := (addr<<1)
+  raddr := waddr|1
 
   dira~
   Serial.start(31, 30, 0, 115200)
@@ -121,20 +126,28 @@ pub Start | val
   Serial.tx(10)
   waitcnt(clkfreq/100 + cnt)
 
-  i2c.Initialize(scl)
+  Wire.init(sda, scl, Wire.FAST)
 
+  count := 0
+  
   repeat
-    i2c.Start(scl)
-    i2c.Write(scl, $4d)
-    val := i2c.Read(scl, 0)
-    val <<= 8
-    val |= i2c.Read(scl, 1)
-    i2c.Stop(scl)
-    Serial.dec(cnt)
-    serial.tx(32)
-    Serial.dec(val)
-    Serial.tx(10)
-    waitcnt(clkfreq/100 + cnt)
+    Wire.start
+    ack := Wire.write(raddr)
+    ifnot (ack)
+      Wire.stop
+      Serial.str(string("no response"))
+      Serial.tx(13)
+    else
+      val := (Wire.read(1)<<8)
+      val |= Wire.read(0)
+      Wire.stop
+      Serial.dec(count)
+      count := count + 1
+      serial.tx(32)
+      Serial.dec(val)
+      Serial.tx(13)
+    waitcnt(clkfreq/10 + cnt)
+
 }}}
 
 = Raspberry Pi =
