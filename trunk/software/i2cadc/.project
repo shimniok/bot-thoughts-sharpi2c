@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>i2cadc</name>
+	<name>A2Di2c</name>
 	<comment></comment>
 	<projects>
+		<project>A2D</project>
+		<project>USI_I2C</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
