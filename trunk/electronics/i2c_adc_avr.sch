@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,16 +39,16 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tPadExt" color="7" fill="1" visible="yes" active="no"/>
-<layer number="54" name="bPadExt" color="1" fill="1" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tPadExt" color="7" fill="1" visible="no" active="no"/>
+<layer number="54" name="bPadExt" color="1" fill="1" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -6098,7 +6098,7 @@ Based on the following sources:&lt;p&gt;
 </library>
 </libraries>
 <attributes>
-<attribute name="DATABASE" value="./../../eagle/PARTSDB.TXT"/>
+<attribute name="DATABASE" value="/home/mes/eagle/PARTSDB.txt"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -6110,21 +6110,40 @@ Based on the following sources:&lt;p&gt;
 <part name="A1" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value=" "/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
-<part name="C3" library="rcl" deviceset="C-US" device="C0603" value="0.001uF"/>
-<part name="C2" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="R4" library="rcl" deviceset="R-US_" device="R0603" value="10K"/>
+<part name="C3" library="rcl" deviceset="C-US" device="C0603" value="1000pF">
+<attribute name="CODE" value="102"/>
+<attribute name="PARTNO" value="CL10B102KB8SFNC"/>
+</part>
+<part name="C2" library="rcl" deviceset="C-US" device="C0603" value="0.1uF">
+<attribute name="PARTNO" value="C1608X7R1E104K080AA"/>
+</part>
+<part name="R4" library="rcl" deviceset="R-US_" device="R0603" value="10K">
+<attribute name="PARTNO" value="1622829-1"/>
+</part>
 <part name="FRAME1" library="mes" deviceset="LETTER_L" device=""/>
 <part name="A0" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value=" "/>
-<part name="R0" library="rcl" deviceset="R-US_" device="R0603" value="220K"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="R0603" value="220K"/>
+<part name="R0" library="rcl" deviceset="R-US_" device="R0603" value="220K">
+<attribute name="PARTNO" value="RC1608J224CS"/>
+</part>
+<part name="R2" library="rcl" deviceset="R-US_" device="R0603" value="220K">
+<attribute name="PARTNO" value="RC1608J224CS"/>
+</part>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="A2" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value=" "/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="220K"/>
-<part name="C4" library="rcl" deviceset="C-US" device="C0603" value="10uF"/>
-<part name="IC1" library="avr-4" deviceset="TINY24/44/84" device="-MU"/>
-<part name="R3" library="rcl" deviceset="R-US_" device="R0603" value="10K"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="220K">
+<attribute name="PARTNO" value="RC1608J224CS"/>
+</part>
+<part name="C4" library="rcl" deviceset="C-US" device="C0603" value="10uF">
+<attribute name="PARTNO" value="CL10A106MP8NNNC"/>
+</part>
+<part name="IC1" library="avr-4" deviceset="TINY24/44/84" device="-MU">
+<attribute name="PARTNO" value="ATTINY44A-MU"/>
+</part>
+<part name="R3" library="rcl" deviceset="R-US_" device="R0603" value="10K">
+<attribute name="PARTNO" value="1622829-1"/>
+</part>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
@@ -6149,22 +6168,41 @@ Based on the following sources:&lt;p&gt;
 <instance part="A1" gate="G$1" x="165.1" y="106.68" rot="MR180"/>
 <instance part="P+1" gate="VCC" x="63.5" y="152.4"/>
 <instance part="SUPPLY1" gate="GND" x="63.5" y="127"/>
-<instance part="C3" gate="G$1" x="58.42" y="35.56"/>
-<instance part="C2" gate="G$1" x="50.8" y="139.7"/>
-<instance part="R4" gate="G$1" x="68.58" y="43.18"/>
+<instance part="C3" gate="G$1" x="58.42" y="35.56">
+<attribute name="PARTNO" x="58.42" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="CODE" x="60.96" y="28.956" size="1.778" layer="96"/>
+</instance>
+<instance part="C2" gate="G$1" x="50.8" y="139.7">
+<attribute name="PARTNO" x="50.8" y="139.7" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="R4" gate="G$1" x="68.58" y="43.18">
+<attribute name="PARTNO" x="68.58" y="43.18" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="2.54"/>
 <instance part="A0" gate="G$1" x="193.04" y="106.68" rot="MR180"/>
-<instance part="R0" gate="G$1" x="185.42" y="99.06" rot="R90"/>
-<instance part="R2" gate="G$1" x="213.36" y="99.06" rot="R90"/>
+<instance part="R0" gate="G$1" x="185.42" y="99.06" rot="R90">
+<attribute name="PARTNO" x="185.42" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="R2" gate="G$1" x="213.36" y="99.06" rot="R90">
+<attribute name="PARTNO" x="213.36" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="P+3" gate="VCC" x="76.2" y="50.8"/>
 <instance part="P+4" gate="VCC" x="193.04" y="124.46"/>
 <instance part="SUPPLY4" gate="GND" x="193.04" y="86.36"/>
 <instance part="A2" gate="G$1" x="220.98" y="106.68" rot="MR180"/>
-<instance part="R1" gate="G$1" x="157.48" y="99.06" rot="R90"/>
-<instance part="C4" gate="G$1" x="76.2" y="35.56"/>
-<instance part="IC1" gate="1" x="73.66" y="147.32"/>
-<instance part="R3" gate="G$1" x="139.7" y="170.18" rot="R90"/>
+<instance part="R1" gate="G$1" x="157.48" y="99.06" rot="R90">
+<attribute name="PARTNO" x="157.48" y="99.06" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="C4" gate="G$1" x="76.2" y="35.56">
+<attribute name="PARTNO" x="76.2" y="35.56" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC1" gate="1" x="73.66" y="147.32">
+<attribute name="PARTNO" x="73.66" y="147.32" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="R3" gate="G$1" x="139.7" y="170.18" rot="R90">
+<attribute name="PARTNO" x="139.7" y="170.18" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="P+5" gate="VCC" x="139.7" y="180.34"/>
 <instance part="P+2" gate="VCC" x="116.84" y="96.52"/>
 <instance part="SUPPLY2" gate="GND" x="116.84" y="73.66"/>

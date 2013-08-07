@@ -736,23 +736,42 @@ Please make sure your boards conform to these design rules.</description>
 <element name="A1" library="SparkFun" package="SJ_3" value=" " x="14.7" y="7.642" smashed="yes">
 <attribute name="NAME" x="12.93" y="6.971" size="1.016" layer="25" ratio="12" rot="R90"/>
 </element>
-<element name="C3" library="rcl" package="C0603" value="0.001uF" x="2.45" y="5.8" smashed="yes" rot="R90"/>
-<element name="C2" library="rcl" package="C0603" value="0.1uF" x="2.45" y="9.5" smashed="yes" rot="R270"/>
-<element name="R4" library="rcl" package="R0603" value="10K" x="1" y="5.8" smashed="yes" rot="R90"/>
+<element name="C3" library="rcl" package="C0603" value="1000pF" x="2.45" y="5.8" smashed="yes" rot="R90">
+<attribute name="PARTNO" value="CL10B102KB8SFNC" x="2.45" y="5.8" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="CODE" value="102" x="2.45" y="5.8" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C2" library="rcl" package="C0603" value="0.1uF" x="2.45" y="9.5" smashed="yes" rot="R270">
+<attribute name="PARTNO" value="C1608X7R1E104K080AA" x="2.45" y="9.5" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="R4" library="rcl" package="R0603" value="10K" x="1" y="5.8" smashed="yes" rot="R90">
+<attribute name="PARTNO" value="1622829-1" x="1" y="5.8" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="A0" library="SparkFun" package="SJ_3" value=" " x="14.7" y="10.042" smashed="yes">
 <attribute name="DATABASE" value="./../../eagle/PARTSDB.TXT" x="14.7" y="10.042" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="12.93" y="9.272" size="1.016" layer="25" ratio="12" rot="R90"/>
 <attribute name="VALUE" x="13.43" y="8.137" size="0.4064" layer="27"/>
 </element>
-<element name="R0" library="rcl" package="R0603" value="220K" x="11.25" y="9.5" smashed="yes" rot="R90"/>
-<element name="R2" library="rcl" package="R0603" value="220K" x="9.8" y="5.8" smashed="yes" rot="R90"/>
+<element name="R0" library="rcl" package="R0603" value="220K" x="11.25" y="9.5" smashed="yes" rot="R90">
+<attribute name="PARTNO" value="RC1608J224CS" x="11.25" y="9.5" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="R2" library="rcl" package="R0603" value="220K" x="9.8" y="5.8" smashed="yes" rot="R90">
+<attribute name="PARTNO" value="RC1608J224CS" x="9.8" y="5.8" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="A2" library="SparkFun" package="SJ_3" value=" " x="14.7" y="5.242" smashed="yes">
 <attribute name="NAME" x="12.93" y="4.472" size="1.016" layer="25" ratio="12" rot="R90"/>
 </element>
-<element name="R1" library="rcl" package="R0603" value="220K" x="11.25" y="5.8" smashed="yes" rot="R90"/>
-<element name="C4" library="rcl" package="C0603" value="10uF" x="9.8" y="9.5" smashed="yes" rot="R270"/>
-<element name="IC1" library="avr-4" package="QFN/MLF20" value="TINY24/44/84-MU" x="6" y="7.75" smashed="yes" rot="R180"/>
-<element name="R3" library="rcl" package="R0603" value="10K" x="1" y="9.5" smashed="yes" rot="R90"/>
+<element name="R1" library="rcl" package="R0603" value="220K" x="11.25" y="5.8" smashed="yes" rot="R90">
+<attribute name="PARTNO" value="RC1608J224CS" x="11.25" y="5.8" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="C4" library="rcl" package="C0603" value="10uF" x="9.8" y="9.5" smashed="yes" rot="R270">
+<attribute name="PARTNO" value="CL10A106MP8NNNC" x="9.8" y="9.5" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="IC1" library="avr-4" package="QFN/MLF20" value="TINY24/44/84-MU" x="6" y="7.75" smashed="yes" rot="R180">
+<attribute name="PARTNO" value="ATTINY44A-MU" x="6" y="7.75" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="R3" library="rcl" package="R0603" value="10K" x="1" y="9.5" smashed="yes" rot="R90">
+<attribute name="PARTNO" value="1622829-1" x="1" y="9.5" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="JP5" library="pinhead-2" package="1X01" value="MISO" x="14.7" y="1.494" smashed="yes">
 <attribute name="VALUE" x="13.43" y="-1.681" size="1.27" layer="27"/>
 </element>
