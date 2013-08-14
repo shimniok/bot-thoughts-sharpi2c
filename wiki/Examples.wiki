@@ -2,10 +2,12 @@
 
 It's easy to interface the I2C adapter with your microcontroller. Here's how. First, you might want to acquaint yourself with the [Protocol protocol] and [Registers registers] used by the I2C Adapter.
 
+Setting up the hardware is simple. You'll need pull-up resistors on SDA and SCL. Try 10K (500uA @ 5V sinked) or as low as 2.2K (2.3mA @ 5V sinked). For masters that run from 5V (e.g., Arduino), pull-up to 5V. For masters that run at 3.3V (ARM, Propeller), it's best to pull-up to 3.3V or, better still, to use a logic level converter like [http://www.adafruit.com/products/757 Adafruit's] or [https://www.sparkfun.com/products/8745 Sparkfun's] I2C level shifter boards, a 74*245, or techniques from [https://www.sparkfun.com/tutorials/65 Sparkfun's tutorial]
+
 Below are examples for: [Examples#Arduino Arduino], [Examples#Galago Galago], [Examples#LPCXpresso LPCXPresso], [Examples#mbed mbed], [Examples#.NET_Micro_Framework .NET Micro Framework], [Examples#Propeller Propeller], [Examples#Raspberry_Pi Raspberry Pi]
 
 = Arduino =
-The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.)
+The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.).
 
 {{{
 #include <Wire.h>
@@ -19,15 +21,15 @@ void setup() {
 }
 
 void loop() {
-  char data[3];
+  char hibyte, lobyte;
   int value;
 
   Wire.requestFrom(addr, 2);
   if (Wire.available()) {
-    data[0] = Wire.read();
+    hibyte = Wire.read();
     if (Wire.available()) {
-      data[1] = Wire.read();
-      value = data[0]<<8 | data[1];
+      lobyte = Wire.read();
+      value = (hibyte<<8) | lobyte;
       Serial.print(millis());
       Serial.print(" ");
       Serial.print(value);
@@ -161,6 +163,8 @@ For stable communication, the A2D requires that masters honor the I2C specificat
 = Raspberry Pi =
 
 You'll need to follow Adafruit's tutorial on [http://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c Configuring I2C]
+
+You'll have to use a [http://www.adafruit.com/products/914 Pi Cobbler] or similar to get access to the I2C pins. Pull them up to 3.3V (or better yet, use a proper [http://www.adafruit.com/products/757 I2C level shifter]).
 
 Then, you'll need a copy of [https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_I2C Adafruit_I2C.py] in the same directory as the example script below:
 
