@@ -152,5 +152,17 @@ pub Start | val, count, raddr, waddr, ack
 
 = Raspberry Pi =
 
+You'll need to follow Adafruit's 
+
+https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_I2C
 {{{
+#!/usr/bin/python
+# Example Python script for Bot Thoughts A2D smart analog to digital converter
+from time import sleep
+from Adafruit_I2C import Adafruit_I2C
+
+while True:
+	i2c = Adafruit_I2C(0x27) # read 7-bit address 0x27
+	print i2c.readU16(0) # read two bytes starting at register 0
+	sleep(0.2)
 }}}
