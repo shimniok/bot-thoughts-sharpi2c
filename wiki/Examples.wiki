@@ -94,7 +94,7 @@ int main() {
 This includes platforms like the FEZ Cerb 40, Netduino, etc., all programmable using Visual Studio and a nicely abstract API.
 
 = Propeller =
-Here are examples in SPIN. Please use my general purpose I2C master because it correctly implements I2C single master protocol. I2C drivers that ignore the I2C spec by driving the bus directly(!) could damage your Propeller or the A2D or both. Those drivers that don't honor clock stretching may not work.
+Here are examples in SPIN. To avoid damage and maximize chances of success--an explanation follows the code below--please use my general purpose I2C master object. It will be available by 9/2013.
 
 {{{
 '' i2c_sharpir demo
@@ -150,11 +150,20 @@ pub Start | val, count, raddr, waddr, ack
 
 }}}
 
+Damage? Yes. Many other Propeller I2C objects ignore the I2C spec and drive bus high. If any other device pulls the bus low at the same time (e.g., clock stretching), the result is an electrical short from your Propeller through the device. 
+
+Instead, I2C devices are supposed set their pins to Hi-Z when they want the bus to go high, pulled up through pull-up resistors. This is easily implemented by setting OUTA low, then using DIRA to either set the pin Hi-Z or pull it low.
+
+Maximize success? Yes. Clock stretching is how slave I2C devices let the master know to wait until the slave is ready. The slave pulls SCL low until it is ready. When the master wants to raise SCL, it sets SCL to Hi-Z and simply waits for SCL to be released by the slave.
+
+For stable communication, the A2D requires that masters honor the I2C specification for clock stretching. This is easy to code.
+
 = Raspberry Pi =
 
-You'll need to follow Adafruit's 
+You'll need to follow Adafruit's tutorial on [http://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c Configuring I2C]
 
-https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_I2C
+Then, you'll need a copy of [https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_I2C Adafruit_I2C.py] in the same directory as the example script below:
+
 {{{
 #!/usr/bin/python
 # Example Python script for Bot Thoughts A2D smart analog to digital converter
