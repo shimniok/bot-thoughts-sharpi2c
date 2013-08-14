@@ -171,7 +171,7 @@ from time import sleep
 from Adafruit_I2C import Adafruit_I2C
 
 while True:
-	i2c = Adafruit_I2C(0x27) # read 7-bit address 0x27
+	i2c = Adafruit_I2C(0x26) # read 7-bit address 0x26
 	print i2c.readU16(0) # read two bytes starting at register 0
 	sleep(0.2)
 }}}
