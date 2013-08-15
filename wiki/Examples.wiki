@@ -176,8 +176,8 @@ Then, you'll need a copy of [https://github.com/adafruit/Adafruit-Raspberry-Pi-P
 from time import sleep
 from Adafruit_I2C import Adafruit_I2C
 
+i2c = Adafruit_I2C(0x26) # read 7-bit address 0x26
 while True:
-	i2c = Adafruit_I2C(0x26) # read 7-bit address 0x26
 	print i2c.readU16(0) # read two bytes starting at register 0
 	sleep(0.2)
 }}}
