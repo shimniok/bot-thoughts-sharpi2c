@@ -5821,7 +5821,6 @@ Based on the following sources:&lt;p&gt;
 <attribute name="PARTNO" value="RC1608J224CS"/>
 </part>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
-<part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="A2" library="SparkFun" deviceset="SOLDERJUMPER_2WAY" device="S" value=" "/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="220K">
 <attribute name="PARTNO" value="RC1608J224CS"/>
@@ -5879,7 +5878,6 @@ Based on the following sources:&lt;p&gt;
 <attribute name="PARTNO" x="198.12" y="76.2" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="P+3" gate="VCC" x="71.12" y="78.74"/>
-<instance part="P+4" gate="VCC" x="177.8" y="101.6"/>
 <instance part="A2" gate="G$1" x="205.74" y="83.82" rot="MR180"/>
 <instance part="R1" gate="G$1" x="142.24" y="76.2" rot="R90">
 <attribute name="PARTNO" x="142.24" y="76.2" size="1.778" layer="96" display="off"/>
@@ -5942,19 +5940,6 @@ Based on the following sources:&lt;p&gt;
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="124.46" x2="38.1" y2="127" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="1" pin="VCC"/>
-</segment>
-<segment>
-<wire x1="149.86" y1="93.98" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="A1" gate="G$1" pin="3"/>
-<wire x1="149.86" y1="88.9" x2="149.86" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="A0" gate="G$1" pin="3"/>
-<wire x1="177.8" y1="88.9" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
-<pinref part="A2" gate="G$1" pin="3"/>
-<wire x1="177.8" y1="93.98" x2="205.74" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="93.98" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
-<junction x="177.8" y="93.98"/>
-<wire x1="177.8" y1="99.06" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -6089,6 +6074,24 @@ Based on the following sources:&lt;p&gt;
 <wire x1="170.18" y1="137.16" x2="149.86" y2="137.16" width="0.1524" layer="91"/>
 <label x="149.86" y="137.16" size="1.778" layer="95"/>
 <pinref part="J1" gate="A" pin="MISO"/>
+</segment>
+<segment>
+<pinref part="A1" gate="G$1" pin="3"/>
+<wire x1="149.86" y1="88.9" x2="149.86" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="93.98" x2="134.62" y2="93.98" width="0.1524" layer="91"/>
+<label x="134.62" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="A0" gate="G$1" pin="3"/>
+<wire x1="177.8" y1="88.9" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
+<label x="162.56" y="93.98" size="1.778" layer="95"/>
+<wire x1="177.8" y1="93.98" x2="162.56" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="A2" gate="G$1" pin="3"/>
+<wire x1="205.74" y1="93.98" x2="205.74" y2="88.9" width="0.1524" layer="91"/>
+<label x="190.5" y="93.98" size="1.778" layer="95"/>
+<wire x1="205.74" y1="93.98" x2="190.5" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="A2" class="0">
