@@ -5,6 +5,20 @@
  Created by Donald R. Blake
  donblake at worldnet.att.net
 
+ modified by Michael Shimniok
+ http://www.bot-thoughts.com/
+
+
+ Modifications:
+ Using registers for read and write, now, sort of emulating an EEPROM
+ Also using a read-only mask
+ Using Bus Pirate notation; 0x4c=write, 0x4d=read ( start is [ stop is ] )
+ [0x4c 3 5] writes 5 to register 3, and sets current register to 3
+ [0x4d r] reads the current register, resets current register to 0 after
+ [0x4c 4 [0x4d r] reads register 4; current register reset to 0 after
+ [0x4c 4][0x4d r] reads register 4; current register reset to 0 after
+ [0x4d rr] reads the first two registers, resets current register to 0 after
+
  ---------------------------------------------------------------------------------
 
  Created from Atmel source files for Application Note AVR312: Using the USI Module
@@ -29,6 +43,7 @@
  27 Mar 2007  Added support for ATtiny261, 461 and 861.
  26 Apr 2007  Fixed ACK of slave address on a read.
  04 Jul 2007  Fixed USISIF in ATtiny45 def
+ 07 Aug 2013  Modified to use registers, add readonly mask, etc.
 
  ********************************************************************************/
 
@@ -160,7 +175,7 @@
 
 #define SET_USI_TO_SEND_ACK( ) \
 		{ \
-	/* prepare ACK */ \
+		/* prepare ACK */ \
 		USIDR = 0; \
 		/* set SDA as output */ \
 		DDR_USI |= ( 1 << PORT_USI_SDA ); \
@@ -175,7 +190,7 @@
 
 #define SET_USI_TO_READ_ACK( ) \
 		{ \
-	/* set SDA as input */ \
+		/* set SDA as input */ \
 		DDR_USI &= ~( 1 << PORT_USI_SDA ); \
 		/* prepare ACK */ \
 		USIDR = 0; \
@@ -191,8 +206,8 @@
 
 #define SET_USI_TO_TWI_START_CONDITION_MODE( ) \
 		{ \
-	USICR = \
-	/* enable Start Condition Interrupt, disable Overflow Interrupt */ \
+		USICR = \
+	    /* enable Start Condition Interrupt, disable Overflow Interrupt */ \
 		( 1 << USISIE ) | ( 0 << USIOIE ) | \
 		/* set USI in Two-wire mode, no USI Counter overflow hold */ \
 		( 1 << USIWM1 ) | ( 0 << USIWM0 ) | \
@@ -209,7 +224,7 @@
 
 #define SET_USI_TO_SEND_DATA( ) \
 		{ \
-	/* set SDA as output */ \
+		/* set SDA as output */ \
 		DDR_USI |=  ( 1 << PORT_USI_SDA ); \
 		/* clear all interrupt flags, except Start Cond */ \
 		USISR    =  \
@@ -221,7 +236,7 @@
 
 #define SET_USI_TO_READ_DATA( ) \
 		{ \
-	/* set SDA as input */ \
+		/* set SDA as input */ \
 		DDR_USI &= ~( 1 << PORT_USI_SDA ); \
 		/* clear all interrupt flags, except Start Cond */ \
 		USISR    = \
