@@ -17,7 +17,7 @@
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release.2147393744" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release"/>
 							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release.406126002" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release"/>
 							<targetPlatform id="de.innot.avreclipse.targetplatform.winavr.lib.release.480710742" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.lib.release"/>
-							<builder buildPath="${workspace_loc:/A2Dlib}/Release" errorParsers="" id="de.innot.avreclipse.target.builder.winavr.lib.release.736161089" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.lib.release"/>
+							<builder buildPath="" errorParsers="" id="de.innot.avreclipse.target.builder.winavr.lib.release.736161089" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="AVR GNU Make Builder" superClass="de.innot.avreclipse.target.builder.winavr.lib.release"/>
 							<tool errorParsers="" id="de.innot.avreclipse.tool.objdump.winavr.lib.release.552901132" name="AVR Create Extended Listing" superClass="de.innot.avreclipse.tool.objdump.winavr.lib.release"/>
 							<tool id="de.innot.avreclipse.tool.linker.winavr.base.861354003" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.base"/>
 							<tool errorParsers="org.eclipse.cdt.core.GASErrorParser" id="de.innot.avreclipse.tool.assembler.winavr.lib.release.1001724243" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.lib.release">
@@ -35,24 +35,6 @@
 							</tool>
 							<tool errorParsers="" id="de.innot.avreclipse.tool.archiver.winavr.lib.release.986080881" name="AVR Archiver" superClass="de.innot.avreclipse.tool.archiver.winavr.lib.release"/>
 							<tool errorParsers="" id="de.innot.avreclipse.tool.size.winavr.lib.release.586798616" name="Print Size" superClass="de.innot.avreclipse.tool.size.winavr.lib.release"/>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="de.innot.avreclipse.configuration.lib.release.438587158.1910368959.2116008557" name="/" resourcePath="Release">
-						<toolChain errorParsers="" id="de.innot.avreclipse.toolchain.winavr.lib.release.1435304451" name="AVR-GCC Toolchain" superClass="de.innot.avreclipse.toolchain.winavr.lib.release" unusedChildren="de.innot.avreclipse.tool.cppcompiler.lib.release">
-							<option id="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release.2147393744.1639600400" name="Generate Extended Listing (Source + generated Assembler)" superClass="de.innot.avreclipse.toolchain.options.toolchain.objdump.lib.release.2147393744"/>
-							<option id="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release.406126002.856305081" name="Print Size" superClass="de.innot.avreclipse.toolchain.options.toolchain.size.lib.release.406126002"/>
-							<targetPlatform id="de.innot.avreclipse.targetplatform.winavr.lib.release" name="AVR Cross-Target" superClass="de.innot.avreclipse.targetplatform.winavr.lib.release"/>
-							<tool errorParsers="org.eclipse.cdt.core.GASErrorParser" id="de.innot.avreclipse.tool.assembler.winavr.lib.release.1259568131" name="AVR Assembler" superClass="de.innot.avreclipse.tool.assembler.winavr.lib.release.1001724243">
-								<inputType id="de.innot.avreclipse.tool.assembler.input.1604061036" superClass="de.innot.avreclipse.tool.assembler.input"/>
-							</tool>
-							<tool errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="de.innot.avreclipse.tool.compiler.winavr.lib.release.1105447303" name="AVR Compiler" superClass="de.innot.avreclipse.tool.compiler.winavr.lib.release.44601074">
-								<inputType id="de.innot.avreclipse.compiler.winavr.input.1712614652" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
-							</tool>
-							<tool id="de.innot.avreclipse.tool.linker.winavr.base.2007028483" name="AVR C Linker" superClass="de.innot.avreclipse.tool.linker.winavr.base.861354003"/>
-							<tool id="de.innot.avreclipse.tool.cpplinker.base.1349154879" name="AVR C++ Linker" superClass="de.innot.avreclipse.tool.cpplinker.base.504130056"/>
-							<tool id="de.innot.avreclipse.tool.archiver.winavr.lib.release.1700624692" name="AVR Archiver" superClass="de.innot.avreclipse.tool.archiver.winavr.lib.release.986080881"/>
-							<tool errorParsers="" id="de.innot.avreclipse.tool.objdump.winavr.lib.release.1378889745" name="AVR Create Extended Listing" superClass="de.innot.avreclipse.tool.objdump.winavr.lib.release.552901132"/>
-							<tool errorParsers="" id="de.innot.avreclipse.tool.size.winavr.lib.release.28778394" name="Print Size" superClass="de.innot.avreclipse.tool.size.winavr.lib.release.586798616"/>
 						</toolChain>
 					</folderInfo>
 					<folderInfo id="de.innot.avreclipse.configuration.lib.release.438587158.1910368959.include" name="/" resourcePath="include">
