@@ -9,6 +9,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <math.h>
 #include "adc.h"
 #include "registers.h"
 #include "filter.h"
