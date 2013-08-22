@@ -10,7 +10,8 @@ INCLUDES = -I"./include"
 F_CPU    = 8000000UL
 MCU      = attiny44a
 CFLAGS   =  -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=$(MCU) -DF_CPU=$(F_CPU) 
- 
+CFLAGS   =  -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=$(MCU) -DF_CPU=$(F_CPU)
+
 RM := rm -rf
 
 # Add inputs and outputs from these tool invocations to the build variables 
