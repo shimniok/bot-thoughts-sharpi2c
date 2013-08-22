@@ -65,28 +65,27 @@ Change Activity:
  * Initialize slave interface
  * @param addr is the 7-bit I2C address this interface will answer to
  * @param top is the maximum number of registers to make available (must be <= MAXREG)
- * @param wmask is the write mask, bits set to 1 are writeable registers
  */
-void usiTwiSlaveInit(uint8_t addr, int top, uint32_t wmask);
+void usiTwiSlaveInit(uint8_t addr, uint8_t top);
 
 /**
  * put data in the transmission buffer, wait if buffer is full
  * @param data is the data to push
  */
-void usiTwiTransmitByte( uint8_t data);
+void usiTwiTransmitByte(uint8_t data);
 
 /**
  * Return a byte from the receive buffer, wait if buffer is empty
  *
  * @return next byte from receive buffer
  */
-uint8_t usiTwiReceiveByte( void );
+uint8_t usiTwiReceiveByte();
 
 /**
  * check if there is data in the receive buffer
  * @return 0 (false) if the receive buffer is empty
  */
-bool usiTwiDataInReceiveBuffer( void );
+bool usiTwiDataInReceiveBuffer();
 
 
 
