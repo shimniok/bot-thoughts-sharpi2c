@@ -269,9 +269,7 @@ typedef enum {
 
  ********************************************************************************/
 
-static int current = 0;
-static int regmax = MAXREG;
-static uint32_t write_mask = 0;
+static uint8_t regmax = MAXREG;
 static uint8_t slaveAddress;
 static volatile overflowState_t overflowState;
 
@@ -304,11 +302,10 @@ void flushTwiBuffers(void) {
 
  ********************************************************************************/
 
-// initialise USI for TWI slave mode
+// initialize USI for TWI slave mode
 
-void usiTwiSlaveInit(uint8_t addr, int top, uint32_t wmask) {
+void usiTwiSlaveInit(uint8_t addr, uint8_t top) {
 
-	write_mask = wmask;
 	regmax = top;
 	slaveAddress = addr;
 
@@ -522,7 +519,7 @@ ISR( USI_OVERFLOW_VECTOR ) {
 
 	case USI_SLAVE_GET_VAL_AND_SEND_ACK:
 		// put the next byte into current register if not read-only
-		if (write_mask & (1<<current)) {
+		if (isWriteableCurrent()) {
 			setCurrentRegister(USIDR);
 		}
 		overflowState = USI_SLAVE_REQUEST_DATA_REG;
