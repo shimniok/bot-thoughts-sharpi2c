@@ -13,15 +13,10 @@
 #include "addr.h"
 #include "usiTwiSlave.h"
 
-/** Globals */
-
-uint8_t addr = 0x26;	// I2C base address (7-bit)
-
-// TODO: convert to manual makefiles
-
 /** Code */
 
 int main(void) {
+	static uint8_t addr = 0x26;	// I2C base address (7-bit)
 
 	registers_init();
 
@@ -29,7 +24,7 @@ int main(void) {
 	addr += get_address();
 
 	// Initialize TWI
-	usiTwiSlaveInit(addr, MAXREG, (1<<RESOLUTION)|(1<<FILTER));
+	usiTwiSlaveInit(addr, MAXREG);
 
 	// Initialize filter
 	filter_init();
@@ -37,7 +32,7 @@ int main(void) {
 	// Initialize ADC
 	adc_init();
 
-	while (1) {
+	while(1) {
 		// Should we go into ADC sleep mode?
 		asm volatile ("NOP" ::);
 	}
