@@ -10,7 +10,7 @@
 #include "registers.h"
 
 static uint32_t filtsum = 0;	// running sum for filter
-static int shift = 3;			// leaky integrator filter shift
+static uint8_t shift = 3;		// leaky integrator filter shift
 
 
 /** initialize, attach pointer into I2C registers */

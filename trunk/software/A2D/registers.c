@@ -7,8 +7,9 @@
 
 #include "registers.h"
 
-static uint8_t reg[MAXREG];
-static int current=0;
+uint8_t reg[MAXREG];
+uint8_t current=0;
+uint8_t wmask;
 
 /**
  * initialize registers
@@ -16,11 +17,21 @@ static int current=0;
  * @param max is the number of registers
  */
 void registers_init() {
-	int i;
-	current = 0;
+	uint8_t i;
+	wmask = (1<<RESOLUTION)|(1<<FILTER);	// initialize write mask
+	current = 0;							// current register starts at 0
 	for (i = 0; i < MAXREG; i++) {
-		reg[i] = 0xad; // dummy data
+		reg[i] = 0xad; 						// fill registers with dummy data
 	}
+}
+
+/**
+ * determine if current register is writeable
+ *
+ * @return true if current register is writeable, false otherwise
+ */
+bool isWriteableCurrent() {
+	return ((wmask & (1<<current)) != 0);
 }
 
 /**
@@ -28,7 +39,7 @@ void registers_init() {
  *
  * @param c register number to be the current register
  */
-bool setCurrent(int c) {
+bool setCurrent(uint8_t c) {
 	bool result = false;
 
 	if (current >= 0 && current < MAXREG ) {
@@ -70,7 +81,7 @@ uint8_t getNextRegister() {
  * @param r is the register to return
  * @return copy of the register value if reg is in range, 0 if reg is out of range
  */
-uint8_t getRegister(int r) {
+uint8_t getRegister(uint8_t r) {
 	uint8_t result = 0;
 	if (r >= 0 && r < MAXREG)
 		result = reg[r];
@@ -95,7 +106,7 @@ void setCurrentRegister(uint8_t value) {
  * @param value is the value to be copied into the register
  * @return false if reg out of range, true otherwise
  */
-bool setRegister(int r, uint8_t value) {
+bool setRegister(uint8_t r, uint8_t value) {
 	bool result = false;
 	if (r >= 0 && r < MAXREG) {
 		reg[r] = value;

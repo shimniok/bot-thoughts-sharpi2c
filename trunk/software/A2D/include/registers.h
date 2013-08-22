@@ -26,9 +26,16 @@
 #define FILTER			4
 
 /**
- * initialize registers
+ * initialize register data, set current register to 0, set write mask
  */
 void registers_init();
+
+/**
+ * determine if current register is writeable
+ *
+ * @return true if current register is writeable, false otherwise
+ */
+bool isWriteableCurrent();
 
 /**
  * set current register
@@ -36,7 +43,7 @@ void registers_init();
  * @param c register number to be the current register
  * @return true if c is in range, 0 if c is out of range
  */
-bool setCurrent(int c);
+bool setCurrent(uint8_t c);
 
 /**
  * return value in the current register
@@ -61,7 +68,7 @@ uint8_t getNextRegister();
  * @param reg is the register to return
  * @return copy of the register value if reg is in range, 0 if reg is out of range
  */
-uint8_t getRegister(int reg);
+uint8_t getRegister(uint8_t reg);
 
 /**
  * sets the current register to the specified value
@@ -79,7 +86,7 @@ void setCurrentRegister(uint8_t value);
  * @param value is the value to be copied into the register
  * @return false if reg out of range, true otherwise
  */
-bool setRegister(int reg, uint8_t value);
+bool setRegister(uint8_t reg, uint8_t value);
 
 
 #endif /* REGISTERS_H_ */
