@@ -34,6 +34,8 @@ RM := rm -rf
 # All Target
 all: $(PROJECT).elf secondary-outputs
 
+# This is included for AVR Studio 4 compatibility
+$(PROJECT): all
 
 # Tool invocations
 $(PROJECT).elf: $(OBJS) $(LIBS)
