@@ -16,9 +16,9 @@
 
 /** static variables */
 
-static int n = 3;  			// scale factor shift
-static int m = 64; 			// oversamples
-static int samples = 0;		// number of samples taken so far
+uint8_t n = 3;  			// scale factor shift
+uint8_t m = 64; 			// oversamples
+uint8_t samples = 0;		// number of samples taken so far
 
 /** initialize ADC and begin first conversion */
 void adc_init() {
@@ -61,14 +61,17 @@ ISR(ADC_vect) {
 		setRegister(RESLO, lo);						// lo byte
 		res = 0;
 		samples = 0;
-		// did we get a new new n?
-		int new_n = getRegister(RESOLUTION);
+		// Did we get a new new n? If so, set m
+		uint8_t new_n = getRegister(RESOLUTION);
 		if (new_n != n) {
 			n = new_n;
-			m = pow(4,n);
+			m = 1;
+			do {									// m = 4^n, optimized for code size vs. pow() and floats
+				m *= n;
+			} while (--new_n);						// do-while pre-decrement, AVR035
 		}
 	}
-	ADCSRA |= (1 << ADSC); 								// start conversion
+	ADCSRA |= (1 << ADSC); 							// start conversion
 }
 
 
