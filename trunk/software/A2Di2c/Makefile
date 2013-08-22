@@ -14,7 +14,8 @@ SIZEDUMMY = sizedummy
 
 F_CPU    = 8000000UL
 MCU      = attiny44a
-CFLAGS   =  -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=$(MCU) -DF_CPU=$(F_CPU) 
+CFLAGS   =  -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=$(MCU) -DF_CPU=$(F_CPU)
+LDFLAGS  = $(LIBDIRS) $(LIBS) -lm
 
 TARGET=t44
 #Pololu programmer
@@ -38,7 +39,7 @@ all: $(PROJECT).elf secondary-outputs
 $(PROJECT).elf: $(OBJS) $(LIBS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: AVR C Linker'
-	avr-gcc -Wl,-Map,$(PROJECT).map $(LIBDIRS) -mmcu=attiny44a -o "$(PROJECT).elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	avr-gcc -Wl,-Map,$(PROJECT).map $(LIBDIRS) -mmcu=attiny44a -o "$(PROJECT).elf" $(OBJS) $(LDFLAGS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -89,11 +90,10 @@ fuses:
 	@echo 'Finished building: $<'
 	@echo ' '
 	
-
 ../A2D/libA2D.a:
 	-cd ../A2D && $(MAKE) all
 
-../USI_I2C/libUSI_I2C.a:
+../USI_I2C/libUSI_I2C.a: ../A2D/libA2D.a
 	-cd ../USI_I2C && $(MAKE) all
 		
 .PHONY: all clean dependents
