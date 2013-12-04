@@ -1,4 +1,4 @@
-#multiple registers make I2C adapter configuration flexible and easy
+#summary multiple registers make I2C adapter configuration flexible and easy
 
 || *Register* || *R/W* || *Description* ||
 || 0 || RO || raw ADC conversion high byte ||
