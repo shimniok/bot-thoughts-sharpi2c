@@ -1,0 +1,16 @@
+For upgrades or ultimate hackability, you can download new firmware to the I2C Adapter.
+
+The I2C Adapter uses an ATtiny24A microcontroller and supports the standard 6-pin AVRISP header. The pin header is not in the standard 6x2 configuration due to space constraints. Here's the pinout
+
+| **Adapter** | **AVRISP** |
+|:------------|:-----------|
+| !R | !RESET |
+| SDA/DI | MOSI |
+| DO | MISO |
+| SCL/SCK | SCK |
+| V | VCC |
+| G | GND |
+
+Just connect the appropriate pins to your AVR programmer and download the code as you normally would.
+
+Note: avrdude doesn't (yet) support the t24a but you can use t24 as the target. That's what I do and it works fine.

@@ -1,0 +1,181 @@
+It's easy to interface the I2C adapter with your microcontroller. Here's how. First, you might want to acquaint yourself with the [protocol](Protocol.md) and [registers](Registers.md) used by the I2C Adapter.
+
+Setting up the hardware is simple. You'll need pull-up resistors on SDA and SCL. Try 10K (500uA @ 5V sinked) or as low as 2.2K (2.3mA @ 5V sinked). For masters that run from 5V (e.g., Arduino), pull-up to 5V.
+
+For masters that run at 3.3V (ARM, Propeller, Raspberry Pi), it's best to pull-up to 3.3V or, better still, to use a logic level converter like [Adafruit's](http://www.adafruit.com/products/757) or [Sparkfun's](https://www.sparkfun.com/products/8745) I2C level shifter boards, a 74\*245, or techniques from [Sparkfun's tutorial](https://www.sparkfun.com/tutorials/65)
+
+Below are examples for: [Arduino](Examples#Arduino.md), [Galago](Examples#Galago.md), [LPCXPresso](Examples#LPCXpresso.md), [mbed](Examples#mbed.md), [.NET Micro Framework](Examples#.NET_Micro_Framework.md), [Propeller](Examples#Propeller.md), [Raspberry Pi](Examples#Raspberry_Pi.md)
+
+# Arduino #
+The Wire library is used for all the Arduino and Arduino-compatible offerings (Teensy, Maple, etc.).
+
+```
+#include <Wire.h>
+
+int addr = 0x26;
+
+void setup() {
+  Wire.begin(addr);
+  Serial.begin(115200);
+  Serial.println("Hello world!\n");
+}
+
+void loop() {
+  char hibyte, lobyte;
+  int value;
+
+  Wire.requestFrom(addr, 2);
+  if (Wire.available()) {
+    hibyte = Wire.read();
+    if (Wire.available()) {
+      lobyte = Wire.read();
+      value = (hibyte<<8) | lobyte;
+      Serial.print(millis());
+      Serial.print(" ");
+      Serial.print(value);
+      Serial.println();
+    }
+  }
+
+}
+```
+
+# Galago #
+Galago is a cool new rapid prototyping platform featuring an excellent IDE with built in debugging.
+
+```
+```
+
+
+# LPCXpresso #
+The Embedded Artists LPCXPresso is a series of ARM-based platforms that use the Code Red IDE and toolchain and LPC's implementation of the ARM CMSIS libraries.
+
+```
+uint16_t value;
+uint8_t hibyte, lowbyte;
+value = hibyte << 8;
+value |= lowbyte;
+```
+
+# mbed #
+The Embedded Artists / NXP mbed is an ARM-based rapid protoyping platform with a hardware abstraction layer similar to Arduino but more powerful.
+
+```
+#include "mbed.h"
+
+DigitalOut myled(LED1);
+I2C i2c(p28, p27);       // sda, scl
+Serial pc(USBTX, USBRX); // tx, rx
+Timer t;
+
+int addr = 0x26;
+
+int main() {
+    
+    i2c.frequency(100000);
+    pc.baud(115200);
+    pc.printf("Hello world!\n");
+    t.start();
+    t.reset();
+    while(1) {
+        char data[3];
+
+        if ( i2c.read(addr<<1, data, 2) != 0) {
+            pc.printf("no response from %d\n", addr);
+        } else {
+            int value;
+            value = data[0]<<8 | data[1];
+            pc.printf("%d %d\n", t.read_ms(), value);
+        }
+    }
+}
+```
+
+
+# .NET Micro Framework #
+This includes platforms like the FEZ Cerb 40, Netduino, etc., all programmable using Visual Studio and a nicely abstract API.
+
+# Propeller #
+Here are examples in SPIN. To avoid damage and maximize chances of success--an explanation follows the code below--please use my general purpose I2C master object. It will be available by 9/2013.
+
+```
+'' i2c_sharpir demo
+
+CON
+  _clkmode      = xtal1 + pll16x
+  _xinfreq      = 5_000_000
+  _stack        = 50
+    
+  sda           = 16
+  scl           = 17
+
+  addr = $26
+
+OBJ
+  Wire   : "I2Cmaster"
+  Serial : "FullDuplexSerial"
+
+pub Start | val, count, raddr, waddr, ack
+
+  waddr := (addr<<1)
+  raddr := waddr|1
+
+  dira~
+  Serial.start(31, 30, 0, 115200)
+  dira[30]~~
+
+  Serial.str(string("Hello world!"))
+  Serial.tx(10)
+  waitcnt(clkfreq/100 + cnt)
+
+  Wire.init(sda, scl, Wire.FAST)
+
+  count := 0
+  
+  repeat
+    Wire.start
+    ack := Wire.write(raddr)
+    ifnot (ack)
+      Wire.stop
+      Serial.str(string("no response"))
+      Serial.tx(13)
+    else
+      val := (Wire.read(1)<<8)
+      val |= Wire.read(0)
+      Wire.stop
+      Serial.dec(count)
+      count := count + 1
+      serial.tx(32)
+      Serial.dec(val)
+      Serial.tx(13)
+    waitcnt(clkfreq/10 + cnt)
+
+```
+
+Damage? Yes. Many other Propeller I2C objects ignore the I2C spec and drive bus high. If any other device pulls the bus low at the same time (e.g., clock stretching), the result is an electrical short from your Propeller through the device.
+
+Instead, I2C devices are supposed set their pins to Hi-Z when they want the bus to go high, pulled up through pull-up resistors. This is easily implemented by setting OUTA low, then using DIRA to either set the pin Hi-Z or pull it low.
+
+Maximize success? Yes. Clock stretching is how slave I2C devices let the master know to wait until the slave is ready. The slave pulls SCL low until it is ready. When the master wants to raise SCL, it sets SCL to Hi-Z and simply waits for SCL to be released by the slave.
+
+For stable communication, the A2D requires that masters honor the I2C specification for clock stretching. This is easy to code.
+
+# Raspberry Pi #
+
+You'll need to follow Adafruit's tutorial on [Configuring I2C](http://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)
+
+You'll have to use a [Pi Cobbler](http://www.adafruit.com/products/914) or similar to get access to the I2C pins. You'll need pull-up resistors and possibly level shifters as described at the top of this document.
+
+Then, you'll need a copy of [Adafruit\_I2C.py](https://github.com/adafruit/Adafruit-Raspberry-Pi-Python-Code/tree/master/Adafruit_I2C) in the same directory as the example script below:
+
+```
+#!/usr/bin/python
+# Example Python script for Bot Thoughts A2D smart analog to digital converter
+from time import sleep
+from Adafruit_I2C import Adafruit_I2C
+
+i2c = Adafruit_I2C(0x26) # read 7-bit address 0x26
+while True:
+	print i2c.readU16(0) # read two bytes starting at register 0
+	sleep(0.2)
+```
