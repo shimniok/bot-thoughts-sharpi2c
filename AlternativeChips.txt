@@ -1,0 +1,8 @@
+Alternatives for ADC expander
+
+- Kinetis KL02 818kSPS - MKL02Z32VFK4 - $0.96 @100 <-- MCHCK(?)
+- STM32F050 1MSPS - STM32F050C6T6A - $1.83 @100 <-- Maple(?)
+- PIC24 500kSPS - PIC24FJ16GA002-I/SS - $1.86 @100 <-- ???
+- LPC1100 400kSPS - LPC1110FD20,529 - $1.62 @100 <-- mbed(?)
+- dsPIC33F 2MSPS - DSPIC33FJ32GP202-I/SS - $2.90 @100 <-- ???
+- Kinetis KL25Z 818kSPS - MKL25Z128VLH4 - $2.21 @100 <-- mbed

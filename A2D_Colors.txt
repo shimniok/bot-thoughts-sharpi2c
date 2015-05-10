@@ -1,0 +1,8 @@
+A2D Color Codes
+
+White - 100pF
+Green - 180pF
+Red - 220pF
+Orange - 330pF
+Yellow - 470pF
+
