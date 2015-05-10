@@ -1,0 +1,132 @@
+A2D Notes
+---------
+
+Marketing fluff
+---------------
+focus on benefit
+genuine, snapshots pictures, urgency, energy verbs(??), simple sentences
+
+purpose of headline, pics: get the first sentence read. Purpose of first sentence, get the 2nd sentence read. Etc.
+make promise to fulfill later
+back up with proof.
+
+direct - promise/benefit right away (30% off)
+indirect - subtle/curiosity
+news - introducing...
+how to - begin with how to
+question - empathize with question/answer
+command - put a tiger in your tank, strong first verb
+reason why - N ways to ... Y reasons why...
+testimony - what someone says
+
+obsess over title, 50/50 rule
+
+useful, urgency, unique, ultra-specific
+
+promise reader a reward/benefit
+each part: main idea, main purpose, 
+don't digress, don't ramble, laser focus
+specific assertions, reasons why, otherwise b.s.
+demonstrate massive credibility, stats, expert references, testimonials, expert on topic
+restate hook, benefit to reader
+make offer
+sum, return to original promise and demonstrate how promise fulfilled
+
+*** Do more research on anti-aliasing, filtering, oversampling, DSP, etc.
+
+Unique selling point: any sharp ranger? ??  Better (how) than an ADC.
+ADC. Smarter. Better. A2D > ADC.
+No mess analog.
+No fuss, no mess analog conversion.
+
+1. use You
+2. features tell, benefits sell
+3. reinforce your unique selling point
+4. screw grammar
+5. delete "that"
+6. tell the reader what to do
+
+
+Create desire, support with features/facts.
+
+7 Science Facts
+1. Make 'em feel something, speak to feeling already there
+2. Sell time, not money
+3. Sweat the small stuff: measure, track improve phrases, wording
+4. Devil's advocate (acknowledge and deal with objections), point out concerns, not infallible
+5. Verbs beat adjectives
+6. Power words: You (name), Free, Because, Instantly, New (product, not brand)
+7. Stories, transport to someplace else. Use detailed imagery, suspense, metaphors, irony, modeling
+
+
+*** research ADC, Sharp, sensor posts on forums, see what problems people have
+
+outline, goals
+write with nouns and verbs... flowery = bye
+clarity==simplicity. overwriting==underthinking
+do not overstate
+don't mix metaphors
+make every word tell
+honest, transparent
+Remove all hype
+
+-----------
+IDC Programming cable: 609-3568-ND digikey + 
+
+-----------
+
+individually tested
+carefully developed
+Try one for $6.
+$6 to stop dealing with ADC/analog forever.
+$6 defeats analog sensors
+add more analog sensors
+are you ready to conquer analog? for $6?
+conquer analog sensors
+stop hating analog
+analog made digital made easy made anything possible
+THE analog sensor solution
+Convert analog sensors/rangers to I2C, SPI, serial
+Works with all Sharp IR Rangers, or all 5v analog sensors
+IR sensors galore
+simple easy to use (trite)
+all the digital processing done for you.
+Analog. Solved.
+lots of analog, zero hassle
+analog smart easy solved simple fast convenient
+immediate
+easy to get started
+
+Wishing my Sharp rangers had a digital interface, I made one.
+lacking analog ports? who cares?
+27 devices per bus. try that with analog.
+
+ads for launch
+
+Distributors?
+-------------
+RobotShop, Acroname, Microcenter?
+
+Product Ideas
+-------------
+Level shifter 5V/3.3V
+Distribution board with pullups?
+RPI I2C. Expansion board?
+Prop I2C object (a correctly implemented one that actually follows the spec)
+MaxBotics EZ0 testing
+input from various forums
+2x3, 2x4, 2x5 header?
+programmer board?
+onboard pullup?
+level shifter?
+finish firmware for I2C, Serial, SPI
+
+Demos
+-----
+radar demo
+balancing robot
+Theremin demo with just the two adapters
+RPi demo (of some kind)
+
+
+
